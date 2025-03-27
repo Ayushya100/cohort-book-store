@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books Store</title>
+
+    <!-- Stylesheet Linkage -->
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+</head>
+<body>
+    <div class="container">
+        <div class="container-fluid">
+            <!-- Navbar -->
+            <div class="navbar">
+                <div class="navbar-container">
+                    <div class="navbar-left">Books Store</div>
+                    <div class="navbar-right">
+                        <div class="search-icon"><span class="material-symbols-rounded">search</span></div>
+                        <input type="text" id="search" class="search-bar" placeholder="Search Books">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book Navbar -->
+            <div class="books-navbar">
+                <div class="books-container">
+                    <div class="list-grid">
+                        <div class="list-grid-val btn inactive-btn" value="list"><span class="material-symbols-rounded">list</span></div>
+                        <div class="list-grid-val btn inactive-btn" value="grid"><span class="material-symbols-rounded">grid_view</span></div>
+                    </div>
+                    <div class="filter-wrapper">
+                        <!-- Sort Dropdown -->
+                        <div class="dropdown">
+                            <button class="dropdown-button" onclick="toggleDropdown()">
+                                <span class="material-symbols-rounded">sort</span>
+                            </button>
+                            <div class="dropdown-content dropdown-none" id="dropdownMenu">
+                                <div id="titleSort" class="inactive-btn">Title</div>
+                                <div id="dateSort" class="inactive-btn">Publish Date</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Book Container -->
+            <div class="books-list-container" id="bookList">
+                <!-- Book List Header -->
+                <div id="booksHeader" class="books-list">
+                    <div class="books-header">
+                        <div class="book-portion">
+                            <div class="sml-thumbnail header-center"></div>
+                            <div class="title header-center">
+                                <div class="header">
+                                    Title
+                                </div>
+                            </div>
+                            <div class="author header-center">
+                                <div class="header">
+                                    Author
+                                </div>
+                            </div>
+                            <div class="publisher header-center">
+                                <div class="header">
+                                    Publisher
+                                </div>
+                            </div>
+                            <div class="published-date header-center">
+                                <div class="header">
+                                    Publish Date
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Books List -->
+                <div id="booksList" class="books-list">
+                    <!-- Books list Record Structure -->
+                    <!-- <div class="books-record">
+                        <div class="book-portion">
+                            <div class="l-sml-thumbnail">
+                                <img src="" alt="" class="thumbnail">
+                            </div>
+                            <div class="title center"></div>
+                            <div class="border-cls"></div>
+                            <div class="author center brd-pad"></div>
+                            <div class="border-cls"></div>
+                            <div class="publisher center brd-pad"></div>
+                            <div class="border-cls"></div>
+                            <div class="published-date center brd-pad"></div>
+                        </div>
+                    </div> -->
+                </div>
+
+                <!-- Books Card -->
+                <div class="books-card-container" id="booksCard">
+                    <div class="books-card-container" id="booksCardWrapper">
+                        <!-- Books Card Record Structure -->
+                        <!-- <div class="books-card">
+                            <div class="c-sml-thumbnail">
+                                <img src="" alt="" class="thumbnail">
+                            </div>
+                            <div class="book-detail">
+                                <div class="title"></div>
+                                <div class="author card-text"></div>
+                                <div class="publisher card-text"></div>
+                                <div class="published-date card-text"></div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <div class="record">
+                    <div class="record-title">Current Records : </div>
+                    <div id="recordCount" class="record-count">1 - 10 of 231</div>
+                </div>
+            </div>
+
+            <!-- Books Detail Container -->
+            <div id="dtlContainer" class="details-container dtl-hidden">
+                <!-- Book Image -->
+                <div class="details-left">
+                    <img id="dtlPreview" src="" alt="">
+                </div>
+                <!-- Book Details -->
+                <div class="details-right">
+                    <div class="dtl-title-close">
+                        <div id="dtlTitle" class="title"></div>
+                        <div id="closeBtn" class="close">
+                            <span class="material-symbols-rounded close-icon">close</span>
+                        </div>
+                    </div>
+                    <div id="dtlSubTitle" class="sub-title"></div>
+                    <div id="dtlDescription" class="description"></div>
+                    <div class="general-dtl">Authors: <span id="dtlAuthors"></span></div>
+                    <div class="general-dtl">Publisher: <span id="dtlPublisher"></span></div>
+                    <div class="general-dtl">Publisher Date: <span id="dtlPublisherDate"></span></div>
+                    <div class="general-dtl">Total Pages: <span id="dtlPages"></span></div>
+                    <div class="general-dtl">ISBN Number: <span id="dtlISBN"></span></div>
+                    <div class="general-dtl">
+                        <a id="dtlBookPreview" class="link" href="" target="_blank">Book Preview</a>
+                    </div>
+                    <div class="general-dtl">
+                        <a id="dtlBookDetails" class="link" href="" target="_blank">Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JS Script -->
+    <script src="bookStore.js"></script>
+</body>
+</html>
