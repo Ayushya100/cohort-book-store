@@ -8,15 +8,7 @@ Initially, only 10 books are displayed.
 This continues until all books are displayed.
 - **List & Grid View Options** - Users can toggle between List View and Grid View to display book records.
 - **View Book Details** - Clicking on any book (in list or grid view) opens its detailed information, which includes:
-Title
-Sub-title
-Description
-Author
-Publisher
-Published Date
-ISBN Number
-Book Preview Link
-Detail Link
+Title, Sub-title, Description, Author, Publisher, Published Date, ISBN Number, Book Preview Link, & Detail Link
 - **Search Functionality** - Users can search for a specific book.
 Search is limited to books already loaded on the UI (does not fetch new books).
 - **Sort Books** - Users can sort books based on:
@@ -56,5 +48,5 @@ Here's how the app looks:
 - JavaScirpt (Functionality & API Handling)
 ## Future Enahancements
 - Implement search across all books (not just loaded ones).
-- Add filters (e.g., author, genre).
+- Add filters (e.g., author, publisher).
 - Allow user customization (e.g., sorting preferences, themes).
